@@ -1,4 +1,3 @@
-
 function findGeomCenter(country) {
   // WTF XXX coords in the data file are [lon, lat] XXX WTF //
   var findCenter = function(g) {
@@ -47,7 +46,7 @@ function findGeomCenter(country) {
   return point;
 }
 
- function getEventCenter(event, radius) {
+function getEventCenter(event, radius) {
   radius = radius || 200;
 
   var point = getPoint.call(this, event);
@@ -84,19 +83,8 @@ function deg2rad(point) {
   return {x: latR, y: -Math.PI/2 - lonR, z: 0};
 }
 
-function convertToXYZ_(point, radius) {
 
-  var latRads = ( 90 - point[0]) * Math.PI / 180;
-  var lngRads = (180 - point[1]) * Math.PI / 180;
-
-  var x = radius * Math.sin(latRads) * Math.cos(lngRads);
-  var y = radius * Math.cos(latRads);
-  var z = radius * Math.sin(latRads) * Math.sin(lngRads);
-
-  return {x: x, y: y, z: z};
-}
-
- function geodecoder (features) {
+function geodecoder (features) {
 
   let store = {};
 

@@ -87,7 +87,7 @@ function init() {
     group.add(thestars);
 
     renderer = new THREE.WebGLRenderer();
-    renderer.setSize( window.innerWidth, window.innerHeight );
+    renderer.setSize(window.innerWidth, window.innerHeight);
 
 
     controls = new THREE.TrackballControls(camera);
@@ -97,7 +97,7 @@ function init() {
     stats = new Stats();
     container.appendChild( stats.dom );
 
-    window.addEventListener( 'resize', onWindowResize, false );
+    window.addEventListener('resize', onWindowResize, false);
 
 }
 
@@ -161,15 +161,14 @@ function spinTheGlobe() {
 }
 
 function onDocumentMouseMove( event ) {
-    mouseX = ( event.clientX - windowHalfX );
-    mouseY = ( event.clientY - windowHalfY );
+    mouseX = (event.clientX - windowHalfX);
+    mouseY = (event.clientY - windowHalfY);
 }
 
 function animate() {
     requestAnimationFrame( animate );
     render();
     stats.update();
-
 }
 
 function render() {
