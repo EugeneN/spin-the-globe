@@ -43,6 +43,7 @@ function init() {
     camera.position.z = 500;
 
     scene = new THREE.Scene();
+    scene.background = new THREE.Color(0xffffff);
 
     scene.add(new THREE.AmbientLight(0x333333));
 
@@ -84,7 +85,7 @@ function init() {
             side: THREE.BackSide
         })
     );
-    group.add(thestars);
+    //group.add(thestars);
 
     renderer = new THREE.WebGLRenderer();
     renderer.setSize(window.innerWidth, window.innerHeight);
@@ -95,7 +96,7 @@ function init() {
     container.appendChild( renderer.domElement );
 
     stats = new Stats();
-    container.appendChild( stats.dom );
+    // container.appendChild( stats.dom );
 
     window.addEventListener('resize', onWindowResize, false);
 
@@ -154,7 +155,7 @@ function spinTheGlobe() {
         highlightCountry(country);
 
         rotationDelta = 0;
-        winner.innerHTML = country.id;
+        winner.innerHTML = country.id + "!";
         winner.style.display = "block";
         spinner.disabled = false;
     }, 500);

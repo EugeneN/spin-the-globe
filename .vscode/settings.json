@@ -1,0 +1,8 @@
+{
+    "titleBar.activeBackground": "f00"
+    , "titleBar.activeForeground": "#fff"
+    , "titleBar.inactiveBackground": "#f00"
+    ,
+    "titleBar.inactiveForeground": "#fff",
+    "workbench.colorTheme": "Quiet Light"
+}
